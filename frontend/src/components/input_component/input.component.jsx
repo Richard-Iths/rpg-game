@@ -1,6 +1,6 @@
 import React from 'react'; 
 
-export const HomeLoginInput = ({inputLabel, inputType}) => {
+export const InputComponent = ({inputLabel, inputType}) => {
     return(
         <div>
             <label>{inputLabel}</label>

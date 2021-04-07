@@ -1,14 +1,17 @@
-import React from 'react';
-import { HomeLogin } from  '../home login/home-login.component'
+import React from 'react'; 
 
 import './home.styles.scss'
 
+import {InputComponent} from '../../../components/input_component/input.component'
+
 export const Home = () => {
     return(
-        <section className="home">
-            <h1>Skurt</h1>
-            <HomeLogin />
+        <form className="home-login-form">
+        <button className="login-btn">LOG IN</button>
+        <InputComponent inputLabel={"ACCOUNT"} inputType={"text"} />
+        <InputComponent inputLabel={"PASSWORD"} inputType={"password"} />
+        <button>Don't have an account? Create one!</button>
 
-        </section>
-    ) 
+    </form>
+    )
 }
