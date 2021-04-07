@@ -1,9 +1,13 @@
-import HelloWorld from "./components/hello-world/hello-world.component";
 
 import "./app.scss";
+import { Home } from './components/pages/home/home.component.jsx'
 
 function App() {
-  return <HelloWorld message="Hey" />;
+  return (
+  <div>
+    <Home />
+  </div>
+  )
 }
 
 export default App;
