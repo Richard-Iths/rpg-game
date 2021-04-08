@@ -2,16 +2,12 @@ import React from 'react';
 
 import './home.styles.scss'
 
-import {InputComponent} from '../../../components/input_component/input.component'
-
+import {LoginForm} from '../../../components/form-component/form.component'
 export const Home = () => {
     return(
-        <form className="home-login-form">
-        <button className="login-btn">LOG IN</button>
-        <InputComponent inputLabel={"ACCOUNT"} inputType={"text"} />
-        <InputComponent inputLabel={"PASSWORD"} inputType={"password"} />
-        <button>Don't have an account? Create one!</button>
-
-    </form>
+        <section>
+        <LoginForm />
+        <p>Or click <span> <a href="/Register">HERE</a></span> to register</p>
+        </section>
     )
 }
