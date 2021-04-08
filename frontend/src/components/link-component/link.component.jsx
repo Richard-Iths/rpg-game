@@ -1,13 +1,10 @@
-import React from "react"
+import React from "react";
+import { Link } from "react-router-dom";
 
 export const Links = ({ link, name }) => {
   // return <a href={link}>{name}</a>
-  return (
-    <a href="#" onClick={() => link()}>
-      {name}
-    </a>
-  )
-}
+  return <Link to={link}>{name}</Link>;
+};
 
 /*
 

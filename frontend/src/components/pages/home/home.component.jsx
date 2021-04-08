@@ -11,7 +11,6 @@ export const Home = () => {
         <InputComponent inputLabel={"ACCOUNT"} inputType={"text"} />
         <InputComponent inputLabel={"PASSWORD"} inputType={"password"} />
         <button>Don't have an account? Create one!</button>
-
     </form>
     )
 }

@@ -1,5 +1,5 @@
-import React from "react"
+import React from "react";
 
-export const game = () => {
-  ;<div>Phazer scenes go here</div>
-}
+export const Game = () => {
+  return <div>Phazer scenes go here</div>;
+};

@@ -17,3 +17,8 @@ body {
   font-size: 1.6em;
   line-height: 1.6em;
 }
+
+.wrapper {
+  display: grid;
+  grid-template-rows: 15vh auto 15vh;
+}

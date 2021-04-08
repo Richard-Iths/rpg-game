@@ -1,24 +1,33 @@
-import React from "react"
-import HeaderSvg from "../../assets/woodTexture/headerSvg.svg"
-import { Links } from "../../components/link-component/link.component"
+import React from "react";
+import HeaderSvg from "../../assets/woodTexture/headerSvg.svg";
+import { Links } from "../../components/link-component/link.component";
+
+import "./menu.styles.scss";
 
 export const Header = () => {
+  const menu = [
+    {
+      name: "Home",
+      path: "/",
+    },
+    {
+      name: "Game",
+      path: "/game",
+    },
+    {
+      name: "Register",
+      path: "/register",
+    },
+  ];
   return (
     <header>
-      <Links
-        name={"HOME"}
-        link={() => console.log("den här funktion triggar route gå till path")}
-      />
-      <Links
-        name={"GAME"}
-        link={"https://uk.yahoo.com/?fr=yset_chr_syc_mac_oracle"}
-      />
-      <Links
-        name={"LINKS"}
-        link={"https://uk.yahoo.com/?fr=yset_chr_syc_mac_oracle"}
-      />
+      <nav className="menu">
+        {menu.map((item) => (
+          <Links link={item.path} name={item.name} />
+        ))}
+      </nav>
 
       <img src={HeaderSvg} alt="" />
     </header>
-  )
-}
+  );
+};
