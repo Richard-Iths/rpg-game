@@ -3,7 +3,11 @@
   padding: 0;
   box-sizing: border-box;
 }
-
+$footer: #6c4913;
+footer,
+header {
+  background: $footer;
+}
 html {
   font-size: 62.5%;
 }

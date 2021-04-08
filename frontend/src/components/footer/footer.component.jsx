@@ -1,9 +1,11 @@
-import React from 'react';
+import React from "react"
+import FooterSvg from "../../assets/woodTexture/footerSvg.svg"
 
 export const Footer = () => {
-    return(
-        <footer>
-            fot
-        </footer>
-    )
-} 
+  return (
+    <footer className="footer">
+      fot
+      <img src={FooterSvg} alt="" />
+    </footer>
+  )
+}
