@@ -1,9 +1,8 @@
-import React, { useEffect, useState } from "react"
+import React, { useState } from "react"
+
 import { Links } from "../../components/link-component/link.component"
 
 import "./menu.styles.scss"
-
-import { useDispatch } from "react-redux"
 
 export const Header = () => {
   // const skurt = async () => {
@@ -17,23 +16,7 @@ export const Header = () => {
   //     .then((data) => console.log(data))
   //     .catch((error) => console.log(error))
   // }
-  const [user, setUser] = useState({ name: "MEOWMEOW", color: "black" })
-  const dispatch = useDispatch()
-  useEffect(() => {
-    const getUserData = async () => {
-      try {
-        const res = await fetch("http://localhost:3000/", {
-          headers: { "Content-Type": "application/json" },
-        })
-        const data = await res.json()
-        setUser(data)
-        dispatch({ type: "SET_USER", payload: data })
-      } catch (error) {
-        console.log(error)
-      }
-    }
-    getUserData()
-  }, [dispatch])
+  const [user] = useState({ name: "MEOWMEOW", color: "black" })
 
   const menu = [
     {
@@ -56,7 +39,6 @@ export const Header = () => {
           <Links link={item.path} name={item.name} key={item.name} />
         ))}
       </nav>
-      <button onClick={() => dispatch({ type: "SET_USER" })}>dispatch</button>
       <div>
         <h1>
           {user.name} {user.color}
