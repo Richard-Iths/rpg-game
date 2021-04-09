@@ -23,7 +23,7 @@ export const Header = () => {
     <header>
       <nav className="menu">
         {menu.map((item) => (
-          <Links link={item.path} name={item.name} />
+          <Links link={item.path} name={item.name} key={item.name} />
         ))}
       </nav>
 
