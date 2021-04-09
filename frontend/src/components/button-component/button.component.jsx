@@ -2,8 +2,8 @@ import React from "react"
 
 import "./button.stylesheet.scss"
 
-export const Button = ({buttonText}) => {
+export const Button = ({buttonText, clickHandle}) => {
   return(
-    <button className="btn">{buttonText}</button>
+    <button className="btn" onClick={clickHandle}>{buttonText}</button>
   )
 }
