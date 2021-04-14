@@ -1,7 +1,6 @@
 import Phaser from "phaser"
 import World from "../../assets/Phaser/Maps/World.json"
 import WorldTile from "../../assets/Game/World/HAS Buildings Pack 1.01/HAS Overworld Starter Pack/SP-Overworld.png"
-//import CastleTile from "../../assets/Game/World/HAS Buildings Pack 1.01/HAS Buildings Pack/Towns/Castle.png"
 
 export default class PreloadScene extends Phaser.Scene {
   constructor() {
@@ -11,7 +10,6 @@ export default class PreloadScene extends Phaser.Scene {
   preload() {
     this.load.tilemapTiledJSON("World", World)
     this.load.image("SP-Overworld", WorldTile)
-    //this.load.image("test", bild)
   }
 
   create() {
@@ -27,8 +25,24 @@ export default class PreloadScene extends Phaser.Scene {
     map.createLayer("World/Woods/Woods", tileset)
     map.createLayer("World/Woods/Woods2", tileset)
     map.createLayer("World/Woods/Woods3", tileset)
+    this.text = this.add.text(200, 100, "hej", {
+      fontSize: "20px",
+      color: "red",
+    })
+    this.text.setInteractive()
+
+    this.text.on(
+      "pointerdown",
+      () => {
+        this.scene.start("MapScene", { text: "hej", map: "Ashland" })
+        // map => name of json map scene ex "Ashland"
+      },
+      this
+    )
 
     /*
+  
+    missing => 
     map.createLayer("World/Levels/Castle")
     map.createLayer("World/Levels/Rampart")
     map.createLayer("World/Levels/Stronghold")
