@@ -1,5 +1,5 @@
 import Phaser from "phaser"
-import AshlandTile from "../../assets/Game/Map/tf_ashlands/1x/tf_A5_ashlands_1.png"
+
 
 export default class MapScene extends Phaser.Scene {
   constructor() {
@@ -13,7 +13,6 @@ export default class MapScene extends Phaser.Scene {
 
   preload() {
     this.load.tilemapTiledJSON("AshlandLevel1", this.TileMap)
-    this.load.image("tf_A5_ashlands_1", AshlandTile)
   }
 
   create() {
