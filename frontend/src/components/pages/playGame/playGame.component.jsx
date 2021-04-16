@@ -1,9 +1,10 @@
 import React from "react";
 import Phaser from "phaser";
 import { IonPhaser } from "@ion-phaser/react";
-import MapScene from "../../../phaser/scenes/map";
+//import MapScene from "../../../phaser/scenes/map";
 // import PreloadScene from '../../../phaser/scenes/preload';
 import WorldScene from "../../../phaser/scenes/test/world";
+import TestScene from "../../../phaser/scenes/test/scene2";
 
 import "./play-game.styles.scss";
 
@@ -15,7 +16,7 @@ const PlayGame = () => {
       height: "100%",
       type: Phaser.AUTO,
       // scene: [PreloadScene, MapScene, WorldScene]
-      scene: [WorldScene],
+      scene: [WorldScene, TestScene],
     },
   };
 
