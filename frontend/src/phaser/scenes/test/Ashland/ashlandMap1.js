@@ -1,12 +1,17 @@
 import Phaser from "phaser"
 
-export default class WorldScene extends Phaser.Scene {
-  constructor() {
-    super("Scene1")
+export default class AshlandScene extends Phaser.Scene {
+  constructor(scen, scenId, skurt) {
+    super(scen)
     this.layers = {}
+    console.log(skurt)
+    this.scenId = scenId
   }
   preload() {
-    this.load.tilemapTiledJSON("ashlandMap", "/assets/Phaser/Maps/Ashland.json")
+    this.load.tilemapTiledJSON(
+      "ashlandMap",
+      `/assets/Phaser/Maps/Ashland${this.scenId}.json`
+    )
     this.load.image("ashland", "/assets/Phaser/tf_A5_ashlands_1.png")
   }
   create() {

@@ -4,9 +4,11 @@ import { IonPhaser } from "@ion-phaser/react";
 //import MapScene from "../../../phaser/scenes/map";
 // import PreloadScene from '../../../phaser/scenes/preload';
 import WorldScene from "../../../phaser/scenes/test/world";
-import TestScene from "../../../phaser/scenes/test/scene2";
+import * as TestScene from "../../../phaser/scenes/test/Ashland/ashlandSceneRouter";
 
 import "./play-game.styles.scss";
+
+console.log(TestScene)
 
 const PlayGame = () => {
   const state = {
@@ -16,7 +18,7 @@ const PlayGame = () => {
       height: "100%",
       type: Phaser.AUTO,
       // scene: [PreloadScene, MapScene, WorldScene]
-      scene: [WorldScene, TestScene],
+      scene: [WorldScene, TestScene.AshlandScenes[0], TestScene.AshlandScenes[1]],
     },
   };
 
